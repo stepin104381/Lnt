@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lnt</string>
+    <string name="enter_username">नाम दर्ज करें</string>
+    <string name="enter_password">पास वर्ड दर्ज करें</string>
+</resources>
