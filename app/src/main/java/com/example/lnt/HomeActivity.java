@@ -11,7 +11,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Log.i(TAG,"Activity created");
+        Log.i(TAG,"Activity created");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         String data=getIntent().getExtras().getString("mykey");
