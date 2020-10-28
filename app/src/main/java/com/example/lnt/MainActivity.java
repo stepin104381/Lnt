@@ -3,6 +3,7 @@ package com.example.lnt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickHandler(View view) {
         Log.i(TAG,"Button Clicked");
+        add(10,20);
         switch (view.getId())
         {
             case R.id.buttonlogin:
@@ -68,10 +70,23 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.buttoncancel:
                 Log.e(TAG,"cancelling");
-                Toast.makeText(this, "Cancelled ! ", Toast.LENGTH_SHORT).show();
+                Intent dialIntent=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:7026873490"));
+                startActivity(dialIntent);
+               // Toast.makeText(this, "Cancelled ! ", Toast.LENGTH_SHORT).show();
                 break;
 
         }
 
+    }
+
+    /**
+     * This will add two numbers
+     * @param n1
+     * @param n2
+     * @return
+     */
+    private int add(int n1,int n2)
+    {
+        return n1+n2;
     }
 }
