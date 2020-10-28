@@ -57,7 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickHandler(View view) {
         Log.i(TAG,"Button Clicked");
-        add(10,20);
+        int sum=add(10,20);
+        //Toast.makeText(this, "Sum is: "+sum, Toast.LENGTH_SHORT).show();
         switch (view.getId())
         {
             case R.id.buttonlogin:
